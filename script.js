@@ -1,5 +1,17 @@
-let fruits = ['a', 'b', 'c', 'b']
+function longestWord (sentence) {
+    
+    const words = sentence.split(' ');
+    let longest = '';
 
-fruits = fruits.filter(fruits => fruits !== 'b')
+    words.forEach(word => {
 
-console.log(fruits);
+        if (word.length > longest.length) {
+            longest = word;
+        }        
+    });
+
+    return longest;
+}
+
+
+console.log(longestWord('i love you, dears'));
